@@ -73,6 +73,11 @@
     <a href="<?= site_url('student/profile') ?>">Student Profile</a>
   </nav>
 
+    <?php if (!empty($_SESSION['access_notice'])): ?>
+    <div class="notice"><?= htmlspecialchars($_SESSION['access_notice']) ?></div>
+    <?php unset($_SESSION['access_notice']); ?>
+  <?php endif; ?>
+
   <div class="hero">
     <h1><?= htmlspecialchars('Student Information Page') ?></h1>
     <p>This mini student portal was built with LavaLust: a route, a controller, a view, and a middleware-protected profile page.</p>
