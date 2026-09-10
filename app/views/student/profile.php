@@ -92,10 +92,6 @@
     <a href="<?= site_url('student/profile') ?>">Student Profile</a>
   </nav>
 
-  <?php if (!empty($_SESSION['access_notice'])): ?>
-    <div class="notice"><?= htmlspecialchars($_SESSION['access_notice']) ?></div>
-    <?php unset($_SESSION['access_notice']); ?>
-  <?php endif; ?>
 
   <div class="card">
     <span class="id-tag">STUDENT INFORMATION</span>
